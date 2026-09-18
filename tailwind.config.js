@@ -13,8 +13,8 @@ export default {
         disapprove: '#B4532A',
       },
       fontFamily: {
-        heading: ['Fraunces', 'Georgia', 'serif'],
-        body: ['"IBM Plex Sans"', 'system-ui', 'sans-serif'],
+        heading: ['Inter', 'system-ui', 'sans-serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         card: '1rem',
