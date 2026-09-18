@@ -1,5 +1,6 @@
-// Deterministic seed data for the demo. Placeholder parties and invented
-// people only — no real party names, logos or real politicians.
+// Deterministic seed data for the demo. Real Kerala coalition/party names are
+// used at the product owner's request; all candidates and office holders are
+// invented people (no real politicians).
 
 import type {
   Approval,
@@ -66,17 +67,17 @@ export const constituencies: Constituency[] = CONSTITUENCY_DATA.map(
 
 // --- Fronts & parties (placeholder names only) ---
 export const parties: Party[] = [
-  { id: 'party-a', name: 'Party A', frontId: 'front-1', adminUserId: null },
-  { id: 'party-b', name: 'Party B', frontId: 'front-1', adminUserId: null },
-  { id: 'party-c', name: 'Party C', frontId: 'front-2', adminUserId: null },
-  { id: 'party-d', name: 'Party D', frontId: 'front-2', adminUserId: null },
-  { id: 'party-e', name: 'Party E', frontId: 'front-3', adminUserId: null },
+  { id: 'party-a', name: 'CPI(M)', frontId: 'front-1', adminUserId: null },
+  { id: 'party-b', name: 'CPI', frontId: 'front-1', adminUserId: null },
+  { id: 'party-c', name: 'INC', frontId: 'front-2', adminUserId: null },
+  { id: 'party-d', name: 'IUML', frontId: 'front-2', adminUserId: null },
+  { id: 'party-e', name: 'BJP', frontId: 'front-3', adminUserId: null },
 ];
 
 export const fronts: Front[] = [
-  { id: 'front-1', name: 'Front 1', partyIds: ['party-a', 'party-b'], coalitionAdminUserId: null },
-  { id: 'front-2', name: 'Front 2', partyIds: ['party-c', 'party-d'], coalitionAdminUserId: null },
-  { id: 'front-3', name: 'Front 3', partyIds: ['party-e'], coalitionAdminUserId: null },
+  { id: 'front-1', name: 'LDF', partyIds: ['party-a', 'party-b'], coalitionAdminUserId: null },
+  { id: 'front-2', name: 'UDF', partyIds: ['party-c', 'party-d'], coalitionAdminUserId: null },
+  { id: 'front-3', name: 'NDA', partyIds: ['party-e'], coalitionAdminUserId: null },
 ];
 
 // --- Roles ---
@@ -219,6 +220,7 @@ users.push(
   makeUser({
     id: 'persona-independent',
     name: 'Ravi Kumar (You — Independent)',
+    // display names use real front/party names at the user's request
     profession: 'Auto driver',
     constituencyId: 'con-13',
     partyId: null,
@@ -228,7 +230,7 @@ users.push(
 users.push(
   makeUser({
     id: 'persona-self-a',
-    name: 'Anjali Nair (You — Party A, self-declared)',
+    name: 'Anjali Nair (You — CPI(M), self-declared)',
     profession: 'School teacher',
     constituencyId: 'con-1',
     partyId: 'party-a',
@@ -239,7 +241,7 @@ users.push(
 users.push(
   makeUser({
     id: 'persona-verified-a',
-    name: 'Deepak Menon (You — Party A, verified)',
+    name: 'Deepak Menon (You — CPI(M), verified)',
     profession: 'Advocate',
     constituencyId: 'con-9',
     partyId: 'party-a',
@@ -250,7 +252,7 @@ users.push(
 users.push(
   makeUser({
     id: 'persona-verified-b',
-    name: 'Fathima Rahman (You — Party B, verified)',
+    name: 'Fathima Rahman (You — CPI, verified)',
     profession: 'Nurse',
     constituencyId: 'con-15',
     partyId: 'party-b',
@@ -261,7 +263,7 @@ users.push(
 users.push(
   makeUser({
     id: 'persona-admin-a',
-    name: 'Suresh Pillai (You — Party A admin)',
+    name: 'Suresh Pillai (You — CPI(M) admin)',
     profession: 'Retired officer',
     constituencyId: 'con-1',
     partyId: 'party-a',
@@ -274,7 +276,7 @@ users.push(
 users.push(
   makeUser({
     id: 'persona-coadmin-1',
-    name: 'Latha Varma (You — Front 1 coalition admin)',
+    name: 'Latha Varma (You — LDF coalition admin)',
     profession: 'Social worker',
     constituencyId: 'con-1',
     partyId: 'party-a',
@@ -474,7 +476,7 @@ for (const c of candidacies) {
   }
 }
 
-// --- Seed audit log for Party A ---
+// --- Seed audit log for CPI(M) (party-a) ---
 const auditLog: AuditLogEntry[] = [
   {
     id: 'audit-1',
@@ -482,7 +484,7 @@ const auditLog: AuditLogEntry[] = [
     adminName: 'Suresh Pillai',
     action: 'verify',
     targetUserName: 'Deepak Menon',
-    detail: 'Verified as a Party A member.',
+    detail: 'Verified as a CPI(M) member.',
     createdAt: SEED_NOW - 30 * 24 * 60 * 60 * 1000,
   },
   {

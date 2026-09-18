@@ -13,7 +13,9 @@ import {
   makeCooldown,
 } from '../lib/rules';
 
-const STORAGE_KEY = 'votedirect-demo-v1';
+// Bump this when the seed shape/labels change so existing browsers re-seed
+// instead of showing stale persisted data.
+const STORAGE_KEY = 'votedirect-demo-v2';
 
 export interface NewUserInput {
   phone: string;

@@ -5,9 +5,10 @@ a **demo for showing partners and party contacts how the system works** — ther
 is **no real backend, login or SMS**. Everything runs in the browser with
 seeded mock data and persists to `localStorage`, so the demo survives a refresh.
 
-> All parties and people are invented placeholders. No real party names, logos
-> or real politicians are used. Colours deliberately avoid those tied to any
-> Kerala party.
+> Real Kerala coalition and party names (LDF/UDF/NDA and CPI(M), CPI, INC,
+> IUML, BJP) are used at the product owner's request. All candidates and
+> office holders are **invented people** — no real politicians. Colours stay
+> neutral rather than tracking any party's branding.
 
 ## Tech
 
@@ -70,7 +71,7 @@ Kept close to what a real backend would use: `users`, `parties`, `fronts`,
 
 - Chief Minister and Leader of Opposition polls are open to **everyone**,
   independents included.
-- Each coalition (Front 1/2/3) has its own CM candidate poll — **only members
+- Each coalition (LDF/UDF/NDA) has its own CM candidate poll — **only members
   of that front's parties** may vote.
 - Party roles (constituency candidate, internal posts) can be voted on **only by
   members of that party**.
@@ -92,14 +93,16 @@ Blocked votes always explain *why* in the UI.
 
 ## Demo personas (Demo panel, bottom-right, on every page)
 
+Coalitions: **LDF** = CPI(M) + CPI · **UDF** = INC + IUML · **NDA** = BJP.
+
 | Persona | What it shows |
 | --- | --- |
 | **Independent** | Can vote in CM / LoP only; every party & front poll is view-only with a reason. |
-| **Party A — self-declared** | Votes in Party A + Front 1 polls; not yet verified (so counts in the "members" segment but not "verified"). |
-| **Party A — verified** | Same as above, but also counts in the "verified members" segment. |
-| **Party B — verified** | Party B member; can vote in Front 1 (Party B is in Front 1) but not Party A's internal polls. |
-| **Party A — admin** | Unlocks the Party Admin panel: verification queue, members, positions, aggregate results, coalition appointment, audit log, billing. |
-| **Front 1 — coalition admin** | Unlocks the Coalition Admin view for Front 1's CM candidate poll. |
+| **CPI(M) — self-declared** | Votes in CPI(M) + LDF polls; not yet verified (so counts in the "members" segment but not "verified"). |
+| **CPI(M) — verified** | Same as above, but also counts in the "verified members" segment. |
+| **CPI — verified** | CPI member; can vote in LDF (CPI is in LDF) but not CPI(M)'s internal polls. |
+| **CPI(M) — admin** | Unlocks the Party Admin panel: verification queue, members, positions, aggregate results, coalition appointment, audit log, billing. |
+| **LDF — coalition admin** | Unlocks the Coalition Admin view for LDF's CM candidate poll. |
 
 The Demo panel also has:
 
@@ -111,5 +114,5 @@ The Demo panel also has:
 ## A note on the seed data
 
 Seed volumes are tuned so **most** segments cross the 20-vote threshold while
-**some** small segments (e.g. thin constituency polls, Party E's verified
+**some** small segments (e.g. thin constituency polls, BJP's verified
 segment) stay under, so the "Hidden until 20 votes" state is visible in the demo.

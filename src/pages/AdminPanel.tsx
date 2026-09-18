@@ -36,7 +36,7 @@ export function AdminPanel() {
   if (!admin || !partyId) {
     return (
       <InfoBanner>
-        This persona is not a party admin. Switch to “Party A — admin” in the demo panel.
+        This persona is not a party admin. Switch to “CPI(M) — admin” in the demo panel.
       </InfoBanner>
     );
   }
