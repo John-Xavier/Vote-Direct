@@ -189,11 +189,11 @@ export const en = {
     reset: 'Reset demo data',
     clock: 'Demo clock',
     personaIndependent: 'Independent',
-    personaSelfA: 'Party A — self-declared',
-    personaVerifiedA: 'Party A — verified',
-    personaVerifiedB: 'Party B — verified',
-    personaAdminA: 'Party A — admin',
-    personaCoadmin1: 'Front 1 — coalition admin',
+    personaSelfA: 'CPI(M) — self-declared',
+    personaVerifiedA: 'CPI(M) — verified',
+    personaVerifiedB: 'CPI — verified',
+    personaAdminA: 'CPI(M) — admin',
+    personaCoadmin1: 'LDF — coalition admin',
   },
 
   footer: {

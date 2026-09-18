@@ -21,7 +21,7 @@ export function CoalitionView() {
   if (!user || !front) {
     return (
       <InfoBanner>
-        This persona is not a coalition admin. Switch to “Front 1 — coalition admin” in the demo panel.
+        This persona is not a coalition admin. Switch to “LDF — coalition admin” in the demo panel.
       </InfoBanner>
     );
   }
